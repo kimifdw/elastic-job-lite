@@ -184,6 +184,7 @@ public final class JobNodeStorage {
      * @param callback 执行操作的回调
      */
     public void executeInLeader(final String latchNode, final LeaderExecutionCallback callback) {
+        // 同一时刻有且仅有一个线程可以继续执行
         try (LeaderLatch latch = new LeaderLatch(getClient(), jobNodePath.getFullPath(latchNode))) {
             latch.start();
             latch.await();
