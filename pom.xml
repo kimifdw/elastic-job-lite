@@ -7,22 +7,22 @@
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
     <description>Elastic-Job - distributed scheduled job solution</description>
-    
+
     <modules>
         <module>elastic-job-lite-core</module>
         <module>elastic-job-lite-spring</module>
         <module>elastic-job-lite-lifecycle</module>
         <module>elastic-job-lite-console</module>
     </modules>
-    
+
     <properties>
         <java.version>1.7</java.version>
         <maven.version.range>[3.0.4,)</maven.version.range>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.locale>zh_CN</project.build.locale>
-        
+
         <springframework.version>[3.1.0.RELEASE,5.0.0.M1)</springframework.version>
-        
+
         <lombok.version>1.16.4</lombok.version>
         <guava.version>18.0</guava.version>
         <commons-lang3.version>3.4</commons-lang3.version>
@@ -42,7 +42,7 @@
         <junit.version>4.12</junit.version>
         <unitils.core.version>3.4.2</unitils.core.version>
         <mockito.version>2.7.21</mockito.version>
-        
+
         <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
         <maven-resources-plugin.version>2.7</maven-resources-plugin.version>
         <maven-jar-plugin.version>2.6</maven-jar-plugin.version>
@@ -64,10 +64,10 @@
         <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
         <taglist-maven-plugin.version>2.4</taglist-maven-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
-        
+
         <javadocExecutable>${java.home}/../bin/javadoc</javadocExecutable>
     </properties>
-    
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -263,7 +263,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
+
     <build>
         <pluginManagement>
             <plugins>
@@ -482,7 +482,7 @@
              -->
         </plugins>
     </build>
-    
+
     <reporting>
         <plugins>
             <plugin>
@@ -549,11 +549,12 @@
             </plugin>
         </plugins>
     </reporting>
-    
+
     <repositories>
         <repository>
             <id>alfresco-maven-repo</id>
-            <url>https://maven.alfresco.com/nexus/content/groups/public/</url>
+            <!-- <url>https://maven.alfresco.com/nexus/content/groups/public/</url> -->
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
         </repository>
         <repository>
             <id>java-net</id>
@@ -576,22 +577,22 @@
             </releases>
         </repository>
     </repositories>
-    
+
     <url>https://github.com/elasticjob/elastic-job</url>
-    <licenses> 
+    <licenses>
         <license>
             <name>Apache License 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
-    
+
     <scm>
         <connection>scm:git:https://github.com/elasticjob/elastic-job.git</connection>
         <developerConnection>scm:git:git@github.com:elasticjob/elastic-job.git</developerConnection>
         <url>https://github.com/elasticjob/elastic-job</url>
     </scm>
-    
+
     <mailingLists>
         <mailingList>
             <name>ZhangLiang</name>
@@ -602,7 +603,7 @@
             <post>caohao@dangdang.com</post>
         </mailingList>
     </mailingLists>
-    
+
     <developers>
         <developer>
             <id>zhangliang</id>
@@ -617,7 +618,7 @@
             <timezone>8</timezone>
         </developer>
     </developers>
-    
+
     <distributionManagement>
         <snapshotRepository>
             <id>sonatype-nexus-snapshots</id>
