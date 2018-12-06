@@ -58,7 +58,8 @@ public final class ShardingListenerManager extends AbstractListenerManager {
         addDataListener(new ShardingTotalCountChangedJobListener());
         addDataListener(new ListenServersChangedJobListener());
     }
-    
+
+    // 分片总数JOB监控
     class ShardingTotalCountChangedJobListener extends AbstractJobListener {
         
         @Override
@@ -72,7 +73,8 @@ public final class ShardingListenerManager extends AbstractListenerManager {
             }
         }
     }
-    
+
+    // 监听服务器数量改变JOB
     class ListenServersChangedJobListener extends AbstractJobListener {
         
         @Override
