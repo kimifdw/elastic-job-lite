@@ -59,6 +59,7 @@ public final class ExecutionContextService {
      * @return 分片上下文
      */
     public ShardingContexts getJobShardingContext(final List<Integer> shardingItems) {
+        // 直接从注册中心读取节点
         LiteJobConfiguration liteJobConfig = configService.load(false);
         removeRunningIfMonitorExecution(liteJobConfig.isMonitorExecution(), shardingItems);
         if (shardingItems.isEmpty()) {

@@ -47,6 +47,13 @@ public final class AverageAllocationJobShardingStrategy implements JobShardingSt
         return result;
     }
 
+    /**
+     * 为每个JobInstance分配对应的分片数
+     *
+     * @param shardingUnits
+     * @param shardingTotalCount
+     * @return
+     */
     private Map<JobInstance, List<Integer>> shardingAliquot(final List<JobInstance> shardingUnits, final int shardingTotalCount) {
         Map<JobInstance, List<Integer>> result = new LinkedHashMap<>(shardingTotalCount, 1);
         // 每个作业运行实例分配的平均分片数
